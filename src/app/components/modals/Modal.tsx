@@ -67,9 +67,8 @@ const Modal: React.FC<ModalProps> = ({
         <div className="relative w-full h-full mx-auto my-6 md:w-4/6 lg:w-3/6 xl:w-2/5 lg:h-auto md:h-auto">
           {/* CONTENT */}
           <div
-            className={`h-full translate duration-300 ${
-              showModal ? "translate-y-0" : "translate-y-full"
-            }
+            className={`h-full translate duration-300 
+            ${showModal ? "translate-y-0" : "translate-y-full"}
              ${showModal ? "opacity-100" : "opacity-0"}`}
           >
             <div className="relative flex flex-col w-full h-full bg-white border-0 rounded-lg shadow-lg outline-none translate lg:h-auto md:h-auto focus:outline-none">
@@ -102,6 +101,7 @@ const Modal: React.FC<ModalProps> = ({
                     onClick={handleSubmit}
                   />
                 </div>
+                {footer}
               </div>
             </div>
           </div>
