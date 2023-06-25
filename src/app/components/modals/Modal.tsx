@@ -12,7 +12,7 @@ interface ModalProps {
   body?: React.ReactElement;
   footer?: React.ReactElement;
   actionLabel: string;
-  disable?: boolean;
+  disabled?: boolean;
   secondaryAction?: () => void;
   secondaryActionLabel?: string;
 }
@@ -24,7 +24,7 @@ const Modal: React.FC<ModalProps> = ({
   body,
   footer,
   actionLabel,
-  disable,
+  disabled,
   secondaryAction,
   secondaryActionLabel,
 }) => {
@@ -35,28 +35,28 @@ const Modal: React.FC<ModalProps> = ({
   }, [isOpen]);
 
   const handleClose = useCallback(() => {
-    if (disable) {
+    if (disabled) {
       return;
     }
     setShowModal(false);
     setTimeout(() => {
       onClose();
     }, 300);
-  }, [disable, onClose]);
+  }, [disabled, onClose]);
 
   const handleSubmit = useCallback(() => {
-    if (disable) {
+    if (disabled) {
       return;
     }
     onSubmit();
-  }, [disable, onSubmit]);
+  }, [disabled, onSubmit]);
 
   const handleSecondaryAction = useCallback(() => {
-    if (disable || !secondaryAction) {
+    if (disabled || !secondaryAction) {
       return;
     }
     secondaryAction();
-  }, [disable, secondaryAction]);
+  }, [disabled, secondaryAction]);
 
   if (!isOpen) {
     return null;
@@ -90,13 +90,13 @@ const Modal: React.FC<ModalProps> = ({
                   {secondaryAction && secondaryActionLabel && (
                     <Button
                       outline
-                      disabled={disable}
+                      disabled={disabled}
                       label={secondaryActionLabel}
                       onClick={handleSecondaryAction}
                     />
                   )}
                   <Button
-                    disabled={disable}
+                    disabled={disabled}
                     label={actionLabel}
                     onClick={handleSubmit}
                   />
