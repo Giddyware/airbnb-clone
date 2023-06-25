@@ -9,7 +9,7 @@ import useLoginModal from "@/app/hooks/useLoginModal";
 import { signOut } from "next-auth/react";
 
 interface UserMenuProps {
-  currentUser: IUserSafe;
+  currentUser: IUserSafe | null;
 }
 
 const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
