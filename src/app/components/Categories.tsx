@@ -1,3 +1,5 @@
+"use client";
+
 import Container from "./Container";
 
 import { TbBeach, TbPool, TbMountain } from "react-icons/tb";
