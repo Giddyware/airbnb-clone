@@ -11,6 +11,7 @@ import Modal from "./Modal";
 import CountrySelect from "../inputs/CountrySelect";
 // import Map from "../Map";
 import dynamic from "next/dynamic";
+import Counter from "./Counter";
 
 enum STEPS {
   CATEGORY = 0,
@@ -37,7 +38,7 @@ const RentModal = () => {
     defaultValues: {
       category: "",
       location: null,
-      getCount: 1,
+      gestCount: 1,
       roomCount: 1,
       bathroomCount: 1,
       imageSrc: "",
@@ -49,7 +50,11 @@ const RentModal = () => {
 
   const category = watch("category");
   const location = watch("location");
+  const gestCount = watch("gestCount");
+  const roomCount = watch("roomCount");
+  const bathroomCount = watch("bathroomCount");
 
+  //*Import MAP
   const Map = useMemo(
     () => dynamic(() => import("../Map"), { ssr: false }),
     [location]
@@ -119,6 +124,38 @@ const RentModal = () => {
           onChange={(value) => setCustomValue("location", value)}
         />
         <Map center={location?.latlng} />
+      </div>
+    );
+  }
+
+  if (step === STEPS.INFO) {
+    bodyContent = (
+      <div className="flex flex-col gap-8">
+        <Heading
+          title="Share some basics about your place"
+          subTitle="What amenities do you have?"
+        />
+
+        <Counter
+          title="Guests"
+          subtitle="How many guests do you allow?"
+          value={gestCount}
+          onChange={(value) => setCustomValue("gestCount", value)}
+        />
+        <hr />
+        <Counter
+          title="Rooms"
+          subtitle="How many rooms do you have?"
+          value={roomCount}
+          onChange={(value) => setCustomValue("roomCount", value)}
+        />
+        <hr />
+        <Counter
+          title="Bathrooms"
+          subtitle="How many bathrooms do you have?"
+          value={bathroomCount}
+          onChange={(value) => setCustomValue("bathroomCount", value)}
+        />
       </div>
     );
   }
