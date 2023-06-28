@@ -29,7 +29,7 @@ const Input: React.FC<InputProps> = ({
       {formatPrice && (
         <BiDollar
           size={24}
-          className="absolute text-neutral-700 top-5 left-5"
+          className="absolute text-neutral-700 top-5 left-2"
         />
       )}
       <input
@@ -45,7 +45,7 @@ const Input: React.FC<InputProps> = ({
       />
       <label
         className={`absolute duration-150 transform -translate-y-3 text-md top-5 z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 
-        ${formatPrice ? "left-0" : "left-4"} 
+        ${formatPrice ? "left-9" : "left-4"} 
         ${errors[id] ? "text-rose-500" : "text-zinc-400"}`}
       >
         {label}
