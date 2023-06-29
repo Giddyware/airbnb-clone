@@ -21,7 +21,7 @@ const initialDateRange = {
 };
 
 interface ListingClientProps {
-  reservations?: IReservation[];
+  reservations?: IReservationSafe[];
   listing: IListingSafe & { user: IUserSafe };
   currentUser?: IUserSafe | null;
 }
