@@ -30,15 +30,16 @@ const ListingReservation: React.FC<ListingReservationProps> = ({
       </div>
 
       <hr />
-      <div className="p-4">
-        <Button disabled={disabled} label="Reserve" onClick={onSubmit} />
-      </div>
+
       <Calendar
         value={dateRange}
         disabledDates={disabledDates}
         onChange={(value) => onChangeDate(value.selection)}
       />
       <hr />
+      <div className="p-4">
+        <Button disabled={disabled} label="Reserve" onClick={onSubmit} />
+      </div>
       <div className="flex flex-row items-center justify-between p-4 font-semibold">
         <div>Total</div>
         <div>$ {totalPrice}</div>
