@@ -51,4 +51,5 @@ interface IReservationSafe extends IReservation {
   startDate: string;
   endDate: string;
   createdAt: string;
+  listing: IListingSafe;
 }
