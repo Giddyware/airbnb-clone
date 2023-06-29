@@ -10,7 +10,7 @@ import getCurrentUser from "./actions/getCurrentUser";
 const font = Nunito({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Airbnb",
+  title: "Airbnb | Giddyware",
   description: "Airbnb Clone",
 };
 
