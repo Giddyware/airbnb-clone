@@ -87,6 +87,12 @@ const SearchModal = () => {
       },
       { skipNull: true }
     );
+
+    setStep(STEPS.LOCATION);
+
+    searchModal.onClose();
+
+    router.push(url);
   }, [
     step,
     searchModal,
@@ -179,7 +185,7 @@ const SearchModal = () => {
       onClose={searchModal.onClose}
       onSubmit={onSubmit}
       title="Filters"
-      actionLabel="Search"
+      actionLabel={actionLabel}
       secondaryAction={step === STEPS.LOCATION ? undefined : onBack}
       secondaryActionLabel={secondaryActionLabel}
       body={bodyContent}
