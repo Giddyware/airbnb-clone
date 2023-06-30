@@ -36,7 +36,12 @@ const Search = () => {
         diff = 1;
       }
 
-      return `${diff} ${diff > 1}?'Days':'Day'`;
+      // return `${diff} ${diff > 1}?'Days':'Day'`;
+      if (diff > 1) {
+        return `${diff} Days`;
+      } else {
+        return `${diff} Day`;
+      }
     }
 
     return "Any Week";
@@ -44,7 +49,13 @@ const Search = () => {
 
   const guestLabel = useMemo(() => {
     if (guestCount) {
-      return `${guestCount} ${Number({ guestCount }) > 1}?'Guests':'Guest'`;
+      // return `${guestCount} ${Number({ guestCount }) > 1}?'Guests':'Guest'`;
+
+      if (Number(guestCount) > 1) {
+        return `${guestCount} Guests`;
+      } else {
+        return `${guestCount} Guest`;
+      }
     }
 
     return "Add Guests";
