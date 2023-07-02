@@ -98,7 +98,7 @@ export const categoryItems = [
   },
 ];
 
-const Categories = () => {
+const CategoryComp = () => {
   const params = useSearchParams();
   const category = params?.get("category");
   const pathname = usePathname();
@@ -123,4 +123,4 @@ const Categories = () => {
     </Container>
   );
 };
-export default Categories;
+export default CategoryComp;
