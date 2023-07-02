@@ -10,7 +10,7 @@ interface NavbarProps {
   currentUser: IUserSafe | null;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
+const NavbarComp: React.FC<NavbarProps> = ({ currentUser }) => {
   return (
     <div className="fixed z-10 w-full bg-white shadow-sm">
       <div className="py-4 border-b">
@@ -26,4 +26,4 @@ const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
     </div>
   );
 };
-export default Navbar;
+export default NavbarComp;
