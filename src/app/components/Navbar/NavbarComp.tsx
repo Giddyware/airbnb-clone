@@ -1,6 +1,6 @@
 "use client";
 
-import Categories from "./Categories";
+import CategoryComp from "./CategoryComp";
 import Container from "../Container";
 import Logo from "./Logo";
 import Search from "./Search";
@@ -22,7 +22,7 @@ const NavbarComp: React.FC<NavbarProps> = ({ currentUser }) => {
           </div>
         </Container>
       </div>
-      <Categories />
+      <CategoryComp />
     </div>
   );
 };
