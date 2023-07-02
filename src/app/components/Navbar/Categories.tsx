@@ -20,7 +20,7 @@ import { MdOutlineVilla } from "react-icons/md";
 import CategoryBox from "../CategoryBox";
 import { usePathname, useSearchParams } from "next/navigation";
 
-export const categoryItems = [
+export const categories = [
   {
     label: "Beach",
     icon: TbBeach,
@@ -98,7 +98,7 @@ export const categoryItems = [
   },
 ];
 
-const CategoryComp = () => {
+const Category = () => {
   const params = useSearchParams();
   const category = params?.get("category");
   const pathname = usePathname();
@@ -111,7 +111,7 @@ const CategoryComp = () => {
   return (
     <Container>
       <div className="flex flex-row items-center justify-between pt-4 overflow-x-auto">
-        {categoryItems.map((item) => (
+        {categories.map((item) => (
           <CategoryBox
             key={item.label}
             label={item.label}
@@ -123,4 +123,4 @@ const CategoryComp = () => {
     </Container>
   );
 };
-export default CategoryComp;
+export default Category;
