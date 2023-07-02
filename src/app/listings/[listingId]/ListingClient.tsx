@@ -9,7 +9,7 @@ import axios from "axios";
 
 import Container from "@/app/components/Container";
 import ListingHead from "@/app/components/listings/ListingHead";
-import { categories } from "@/app/components/navbar/CategoryComp";
+import { categories } from "@/app/components/navbar/Categories";
 import ListingInfo from "@/app/components/listings/ListingInfo";
 import useLoginModal from "@/app/hooks/useLoginModal";
 import ListingReservation from "@/app/components/listings/ListingReservation";

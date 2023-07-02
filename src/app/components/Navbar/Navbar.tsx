@@ -1,6 +1,6 @@
 "use client";
 
-import CategoryComp from "./CategoryComp";
+import Categories from "./Categories";
 import Container from "../Container";
 import Logo from "./Logo";
 import Search from "./Search";
@@ -10,7 +10,7 @@ interface NavbarProps {
   currentUser: IUserSafe | null;
 }
 
-const NavbarComp: React.FC<NavbarProps> = ({ currentUser }) => {
+const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
   return (
     <div className="fixed z-10 w-full bg-white shadow-sm">
       <div className="py-4 border-b">
@@ -22,8 +22,8 @@ const NavbarComp: React.FC<NavbarProps> = ({ currentUser }) => {
           </div>
         </Container>
       </div>
-      <CategoryComp />
+      <Categories />
     </div>
   );
 };
-export default NavbarComp;
+export default Navbar;

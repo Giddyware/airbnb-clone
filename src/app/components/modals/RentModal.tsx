@@ -12,8 +12,8 @@ import useRentModal from "@/app/hooks/useRentModal";
 import Modal from "./Modal";
 import Counter from "../inputs/Counter";
 import CategoryInput from "../inputs/CategoryInput";
-import { categoryItems } from "../navbar/CategoryComp";
 import CountrySelect from "../inputs/CountrySelect";
+import { categories } from "../navbar/Categories";
 
 import ImageUpload from "../inputs/ImageUpload";
 import Input from "../inputs/Input";
@@ -143,7 +143,7 @@ const RentModal = () => {
           overflow-y-auto
         "
       >
-        {categoryItems.map((item) => (
+        {categories.map((item) => (
           <div key={item.label} className="col-span-1">
             <CategoryInput
               onClick={(category) => setCustomValue("category", category)}
