@@ -23,3 +23,41 @@ body,
   font-size: 16px !important;
   width: 100% !important;
 }
+
+.skeleton {
+  border-radius: 0.25rem;
+  animation: skeletonLoading 1s linear infinite;
+}
+
+.skeleton-card {
+  border-radius: 12px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+}
+
+.skeleton-card-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.skeleton-card-title {
+  width: 70%;
+  height: 0.7rem;
+  margin: 0.5rem;
+}
+
+.skeleton-card-category {
+  width: 20%;
+  height: 0.2rem;
+  margin: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+@keyframes skeletonLoading {
+  from {
+    background-color: hsl(200, 20%, 80%);
+  }
+  from {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
