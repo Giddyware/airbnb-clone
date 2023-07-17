@@ -12,8 +12,8 @@ import Navbar from "./components/navbar/Navbar";
 const font = Nunito({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Airbnb | Giddyware",
-  description: "Airbnb Clone",
+  title: "AzureHomes | Giddyware",
+  description: "AzureHomes",
 };
 
 export default async function RootLayout({
